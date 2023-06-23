@@ -1,0 +1,66 @@
+.cantainer{
+    font-family:'Times New Roman', Times, serif;  
+    padding-bottom: 100px;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.form{
+    margin: 0;
+    background-color: rgb(51, 51, 63);
+    /* height: 50px; */
+    padding:10px 40px;  
+    color: white;
+    border-radius: 10px;
+    border: 3px solid gray;
+}
+.card{
+    padding: 5px;
+    height: 65px;
+}
+
+label,input{
+    display: block;
+}
+
+.input-filde{
+    margin-top: 5px;
+    width: 300px;
+    height: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn{
+    font-size: larger;
+    background: rgb(29, 33, 38);
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 100px;
+}
+
+.btn:hover{
+    background-color: rgb(34, 34, 74);
+    color:white ;
+    
+}
+
+.tbl{
+    background: rgb(51, 51, 63);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid gray;
+}
+
+.table-header{
+    background: rgb(29, 33, 38);
+}
