@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState} from 'react';
+import {useState} from 'react'
 import './Form.css'
 
 function Form() {
@@ -92,7 +92,6 @@ function Form() {
                 className='input-filde'
                 placeholder="Email"
                 required
-                // pattern='Yes'
                 />
                 
             </div>
@@ -159,26 +158,29 @@ function Form() {
                         <th>Pincode</th>
                         <th>Action</th>
                     </tr>
-                    {inputarr.length > 1  ? ( inputarr.map((info, ind) => {
+                    {inputarr.length < 1 ? ( 
+
+                      <tr className='data'>
+                      <td colSpan={4}>NO Data Enter Yet !</td>
+                      </tr>
+                  
+                    ): (
+                  inputarr.map((info, ind) => {
                        
                         return (
-                            <tr key={ind}>
-                                <td>{ind + 1}</td>
-                                <td>{info.first_name}</td>
-                                <td>{info.last_name}</td>
-                                <td>{info.date_of_birth}</td>
-                                <td>{info.email}</td>
-                                <td>{info.mobile_number}</td>
-                                <td>{info.city}</td>
-                                <td>{info.pincode}</td>
-                                <td><button className='btn' onClick={()=>delethandle(ind)}>Delete</button></td>
-                            </tr>
-                        )
-                    }))
-                       : (
-                         <tr className='data'>
-                            <td colSpan={4}>NO Data Enter Yet !</td>
-                        </tr>
+                        <tr key={ind}>
+                    <td>{ind + 1}</td>
+                     <td>{info.first_name}</td>
+                  <td>{info.last_name}</td>
+            <td>{info.date_of_birth}</td>
+            <td>{info.email}</td>
+            <td>{info.mobile_number}</td>
+            <td>{info.city}</td>
+            <td>{info.pincode}</td>
+            <td><button className='btn' onClick={()=>delethandle(ind)}>Delete</button></td>
+        </tr>
+    )
+})
                         )}
 
                 </tbody>
